@@ -1,7 +1,8 @@
 FROM alpine
 
 #RUN apk add --no-cache youtube-dl youtube-dl-bash-completion
-RUN apk add --no-cache youtube-dl
+RUN apk add --no-cache youtube-dl ca-certificates
+RUN update-ca-certificates
 
 ARG THEUSER=ytdl
 RUN adduser -D -g '' ${THEUSER}
