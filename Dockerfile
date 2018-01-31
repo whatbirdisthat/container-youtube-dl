@@ -1,7 +1,7 @@
 FROM alpine
 
 #RUN apk add --no-cache youtube-dl youtube-dl-bash-completion
-RUN apk add --no-cache youtube-dl ca-certificates
+RUN apk add --no-cache youtube-dl ca-certificates ffmpeg
 RUN update-ca-certificates
 
 ARG THEUSER=ytdl
